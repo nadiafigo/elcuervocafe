@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+:root {
+    --lightYellow: hsl(56, 100%, 94%);
+    --lightGreen: hsl(80, 88%, 86%);
+    --lightOrange: hsl(35, 100%, 85%);
+    --lightPink: hsl(0, 100%, 90%);
+    --lightPurple: hsl(245, 48%, 89%);
+    --veryLightPurple: hsl(270, 60%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --gray: hsl(240, 2%, 79%);
+    --darkGrayishPurple: hsl(207, 13%, 34%);
+    --darkBlue: hsl(237, 23%, 32%);
+    --darkPurple: hsl(272, 23%, 32%);
+    --darkGray: hsl(240, 10%, 16%);
+    --gold: hsl(35, 100%, 80%);
+
+    --fontRubik: 'Rubik', sans-serif;
+    --fontHelvetica: 'Helvetica', sans-serif;
+    --fontPoppins: 'Poppins', sans-serif;
+}
+
+/* hsl(272, 23%, 32%); #574162 otro fondo barra superior */
+
+body {
+    background-color: var(--veryLightPurple);
+    font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+    content:"";
+    background-image: url(../img/home_bg_80fill.png);
+    width: 100%;
+    height: 100vh;
+    /* background-attachment: fixed; */
+    position: fixed;
+    background-position: 0% 50%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    margin: 0px auto;
+}
+
+
+.header-container {
+    width: 100%;
+    height: 7rem;
+    position: fixed;
+    top: 0px;
+    background-color: var(--lightPurple);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+
+.back-icon {
+    cursor: pointer;
+    height: 2.6rem;
+}
+
+.back-button {
+    border: none;
+    background-color: var(--lightPurple);
+}
+
+/* --------------------------------------------MAIN CONTENT */
+
+main {
+    color: var(--darkGrayishPurple);
+    padding: 10rem 4rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.film-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.4rem;
+}
+
+.title-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: var(--white);
+}
+
+.film-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.det_film-title {
+    font-weight: 500;
+    font-size: 2.8rem;
+    margin: .5rem 0;
+}
+
+.det_year {
+    font-size: 1.8rem;
+}
+
+.det_duration {
+    font-size: 1.8rem;
+    margin-left: 2rem;
+}
+
+
+
+.film__checkbox {
+    display: none;
+}
+
+.film__checkmark {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    border: solid .2rem var(--white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checked-icon {
+    height: 3rem;
+}
+
+.film__checkbox:hover ~ .film__checkmark {
+    background-color: var(--lightPurple);
+}
+
+.film__checkbox:hover ~ .checked-icon {
+    display: block;
+}
+
+
+.film__checkbox:checked ~ .film__checkmark {
+    background-color: var(--lightPink);
+    border: solid .2rem var(--lightPink);
+
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.film-picture {
+    height: 20rem;
+    width: 30rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: var(--gray);
+    margin-top: 2rem;
+}
+
+.rating-scores {
+    margin-top: 0;
+    padding-bottom: 1.6rem;
+    padding-top: 1.6rem;
+    width: 30rem;
+    height: 14rem;
+    border-radius: 0 0 2rem 2rem;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.score {
+    height: 5rem;
+    width: 100%;
+    /* margin-top: 1.4rem; */
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.star-rating__audience {
+    user-select: none;
+}
+
+.rated-star {
+    font-size: 2.8rem;
+    color: var(--gold);
+    background-color: unset;
+    border: none;
+}
+
+.star {
+    font-size: 2.8rem;
+    color: var(--gold);
+    background-color: unset;
+    border: none;
+}
+
+.star-rating__personal {
+    user-select: none;
+}
+
+.star:hover {
+    cursor: pointer;
+}
+
+.film-description {
+    height: auto;
+    width: 30rem;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+}
+
+.film-description h3 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--darkGray);
+}
+
+.descr-text {
+    text-align: justify;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    color: var(--darkGray);
+    font-weight: 400;
+}
+
+.more-info {
+    display: block;
+    margin: 4rem auto 0 auto;
+    font-size: 1.8rem;
+}
+
+.film-description a {
+    font-weight: 700;
+    color: var(--darkGray);
+    background-color: var(--lightPink);
+    text-decoration: none;
+    padding: 1.8rem;
+    border-radius: .5rem;
+    font-weight: 600;
+    text-align: center;
+    width: 15rem;
+    box-shadow: 5px 5px 15px var(--darkPurple);
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--lightPurple);
+}
+
+.attribution {
+    padding: 2rem 4.6rem 2rem 4.6rem;
+    color: var(--darkBlue);
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: var(--lightPurple);
+}
+
+.attribution p {
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--darkBlue);
+}
+
+

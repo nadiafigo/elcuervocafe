@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href=""> <!-- webpage icon -->
+    <title>Studio Ghibli Filmtracker | Film details</title>
+    <link rel="stylesheet" href="../normalize.css">
+    <link href="../css/film.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!----- HEADER ----->
+    <header>
+        <div class="header-container">
+            <button onclick="history.back()" href="#" class="back-button">
+                <img class="back-icon" src="../img/icons/icons8-atrás-50.png" alt="back-icon">
+            </button>
+        </div>
+    </header>
+
+    <!----- MAIN ----->
+    <main>
+        <div class="film-header">
+            <div class="title-container">
+                <h1 class="det_film-title" id="det_film-title"></h1>
+                <div class="film_details">
+                    <span class="det_year" id="det_year"></span>
+                    <span class="det_duration" id="det_duration"></span>
+                </div>
+            </div>
+        <input type="checkbox" id="film__checkbox" class="film__checkbox">
+                <label for="film__checkbox" class="film__checkmark">
+                    <img class="checked-icon" src="../img/icons/icons8-marca-de-verificación-30.png" alt="checked-icon">
+                </label>
+        </div>
+
+        <div class="details-container">
+            <img id="film-picture" class="film-picture" src="" alt="">
+            <div class="rating-scores">
+                <div class="audience score">
+                    <span>Audience Score</span>
+                    <div id="star-rating__audience" class="star-rating__audience"></div>
+                </div>
+                <div class="personal score">
+                    <span>Your Score</span>
+                    <div class="star-rating__personal">
+                        <button class="star">&#9734;</button>
+    <button class="star">&#9734;</button>
+    <button class="star">&#9734;</button>
+    <button class="star">&#9734;</button>
+    <button class="star">&#9734;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="film-description">
+                <h3>Film summary</h3>
+                <p class="descr-text" id="film-description">
+                    This is the film detailed description. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam est eaque accusantium. Cupiditate praesentium deserunt impedit maiores, veritatis earum veniam, ducimus voluptates sunt ab accusantium non id esse suscipit dolorum!
+                </p>
+                <a href="" id="more-info" class="more-info">More info</a>
+            </div>
+        </div>
+        <div></div>
+    </main>
+
+    <!----- FOOTER ----->
+    <footer>
+
+        <div class="attribution">
+            <p>Coded by <a href="https://nadiafigo.github.io/">Nadia Figueroa</a> as final project for the Latinas CodeCamp of <a href="https://technolatinas.org/">Technolatinas</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/film.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href=""> <!-- webpage icon -->
+    <title>Menú de Juegos de Mesa</title>
+    <link rel="stylesheet" href="../normalize.css">
+    <link href="./juegos.css" rel="stylesheet" />
+</head>
+
+<body class="bg-img">
+
+    <!----- HEADER ----->
+    <header>
+        <div class="header-container">
+            <div>
+                <button onclick="history.back()" href="#" class="back-button">
+                    <img class="back-icon" src="./icons/icons8-atrás-50.png" alt="back-icon">
+                </button>
+            </div>
+
+            <label for="search__input" class="search__input">
+                <input list="film-search" type="text" id="search__input" class="search__input" placeholder="🔍 Qué juego buscas?">
+            </label>
+
+            <input type="checkbox" id="filter__checkbox" class="filter__checkbox">
+                <label for="filter__checkbox" class="filter__toggle">
+                    <img class="filter-icon" src="./icons/icons8-opciones-para-ordenar-50.png" alt="filter-icon">
+                </label>
+
+            <div class="filter-container">
+                <div class="filter-container2">
+                    <div class="filter-item">
+                        <label for="sort-by" class="filter-list-container">
+                            <span class="sort-by">Ordenar por</span>
+                            <select name="sort-by" id="sort-by" class="filter__list">
+                                <option value="" id=""></option>
+                                <option value="Número de jugadores" id="duration_filter">Número de Jugadores</option>
+                                <option value="Duración" id="year_filter">Duración aproximada</option>
+                                <option value="Edad mínima" id="score_filter">Edad mínima</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="filter-item">
+                        <label for="order" class="filter-list-container">
+                            <span class="order">Orden</span>
+                            <select name="order" id="order" class="filter__list">
+                                <option value="Ascendente">Ascendente</option>
+                                <option value="Descendente">Descendente</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div> 
+
+        </div>
+    </header>
+
+    <!----- MAIN ----->
+    <main>
+        <div class="main_title">
+            <h1 class="webapp-title">MENÚ DE <br> JUEGOS DE MESA <span></span></h1>
+            <img class="isotipo" src="./img/EL.png" alt="back-icon">
+        </div>
+
+        <!-- <img class="webapp-title" src="../img/app-title_small.png" alt="GhibliStudio Filmtracker"> -->
+        <div class="filmlist-container" id="filmlist-container"></div>
+        <template film-card-template>
+            <div>
+                <a class="film" id="" href="" film-card >
+                    <img class="film-pic" src="" img-card/>
+                    <div class="film-info">
+                    <div class="film-title">
+                        <h3 class="title" film-title></h3>
+                            <input type="checkbox" id="" class="film__checkbox" checkmark-input>
+                            <label for="" class="checkmark" checkmark-label>
+                                <img class="checked-icon" src="../img/icons/icons8-marca-de-verificación-30.png" alt="checked-icon">
+                            </label>
+                    </div>
+                    <div class="film-details">
+                        <p class="year" film-year></p>
+                        <p class="space">  |  </p>
+                        <p class="duration" duration></p>
+                    </div>
+                    
+                    <p class="description" film-description></p>
+                    <div class="star-rating" star-rating>
+                        <!-- AUDIENCE RATING IMPLEMENTED BY JS -->
+                    </div>
+                    </div>
+                </a>
+            </div>
+            
+        </template>
+            
+    </main>
+
+    <!----- FOOTER ----->
+    <footer>
+
+        <div class="attribution">
+            <p>Coded by <a href="https://nadiafigo.github.io/">Nadia Figueroa</a></p>
+        </div>
+    </footer>
+
+
+
+    <script type="module" src="./juegos.js"></script>
+
+</body>
+
+</html>

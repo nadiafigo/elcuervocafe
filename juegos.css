@@ -84,10 +84,25 @@ header {
     padding: 1.5rem;
 }
 
-.profile-icon {
-    height: 2.6rem;
+.back {
+    display: block;
+    align-items: center;
+}
+
+.back-button {
+    background-color: var(--black);
+    margin: 0;
+    padding: 0;
+}
+
+.back-icon {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 2.8rem;
     cursor: pointer;
     user-select: none;
+    background-color: var(--black);
 }
 
 .profile-text {
